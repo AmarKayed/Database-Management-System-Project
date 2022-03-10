@@ -1,0 +1,17 @@
+create or replace trigger exercitiul_10
+    for insert on angajat
+    compound trigger
+    
+    before statement is
+    begin
+        dbms_output.put_line('A fost apelat trigger-ul compound');
+    end before statement;
+    
+    after statement is
+    begin
+        update angajat
+        set salariu = salariu - 0.2*salariu;
+    end after statement;
+    
+end exercitiul_10;
+/

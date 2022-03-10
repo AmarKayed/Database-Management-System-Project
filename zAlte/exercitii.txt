@@ -1,0 +1,110 @@
+-- Exercitiul 6
+
+pentru un id dat ca parametru si incepand cu urmatoarele linii de dupa acest id pana la sfarsitul tabelului
+(incepand cu acest id)
+pentru fiecare student al carui id este egal cu un numar fibonacci +- o marja de eroare de maxim 1 numar
+
+sa se afiseze numele profesorilor la care acesta invata precum si salariul acestora
+
+afisarea se va face sub forma: nume prenume salariu
+pentru fiecare profesor in parte
+
+De asemenea, sa se afiseze lista tuturor numerelor fibonacci mai mici sau egale +- 1 decat id-ul maxim al categoriei
+de studenti aflate pe liniile urmatoare din tabel fata de id-ul dat ca parametru
+
+Daca nu exista studenti cu id-uri egale cu numere fibonacci, se va arunca o exceptie "NO_FIBONACCI_FOUND"
+daca mai mult de jumatate + 1 dintre toti studentii eligibili(care se afla sub id-ul dat ca parametru)
+au id-uri egale cu numere fibonacci +- marja de eroare, atunci se va arunca exceptia
+"TOO_MANY_FIBONACCI"
+
+
+Indiferent daca se va arunca o exceptie no_fibonacci_found sau too_many_fibonacci 
+id-ul dat, id-ul maxim, precum si numerele fibonacci mai mici ca id-ul maxim vor fi afisate.
+
+In cazul exceptiei no_data_found, se va trata direct exceptia, intrucat nu se poate face
+nimic fara un id valid.
+
+
+
+
+
+
+
+-- Exercitiul 7
+
+sa se afiseze toti angajatii al caror salariu se incadreaza intre cei doi parametri a si b, 
+precum si colegii lor de munca la facultate
+
+
+
+
+-- Exercitiul 8
+
+
+Pentru prenumele si numele unui student date ca parametru se va returna
+numele tarii in care se afla facultatea la care este inscris studentul.
+In cazul in care studentul este inscris la mai multe facultati, se va
+alege facultatea cu ranking-ul mai mare.
+
+De asemenea, se vor afisa in dbms_output numele specializarii, numele caminului in care
+este cazat studentul precum si numele tarii in care se afla facultatea.
+
+Propozitia afisata va avea forma:
+
+Studentul <<nume>> <<prenume>> urmeaza specializarea <<x>> dintr-o facultate din <<y>>,
+fiind cazat in caminul <<z>>.
+
+
+
+-- Exercitiul 9
+
+
+Pentru un ranking al unei facultati dat ca parametru, sa se returneze numele facultatii, 
+impreuna cu nota cea mai mare obtinuta in cadrul facultatii, numele disciplinei, 
+numele studentului si numele profesorului coordonator
+
+Daca exista mai multi studenti cu nota maxima, se va afisa doar primul in ordine alfabetica dupa nume si prenume.
+
+
+
+
+-- Exercitiul 11
+
+Daca se doreste inserarea unui nou angajat, acesta va putea fi inserat
+doar daca salariul lui adaugat cu salariul
+tuturor angajatilor nu depaseste valoarea de 37000
+
+Daca conditia nu este indeplinita atunci
+se vor genera erori diferite in felul urmator:
+    - Daca salariul este inserat(insert) si este mai mare decat salariul minim, se va afisa un mesaj, daca este mai mic, se va afisa alt mesaj
+    - Daca salariul este modificat(update) si este mai mare decat salariul mediu, se va afisa un mesaj, daca este mai mic, se va afisa alt mesaj
+    
+cele doua salarii alternative vor fi calculate din salariile tuturor angajatilor deja existenti in baza de date,
+cu exceptia salariului angajatului care declanseaza triggerul
+
+In orice caz, daca triggerul va fi declansat acesta va apela o eroare.
+
+Din moment ce se va lucra pe tabel mutating
+se va crea un pachet cu toate informatiile necesare din tabelul respectiv
+pachetul va fi populat prin intermediul unui trigger la nivel de comanda
+folosind precedenta triggerilor before la nivel de comanda vs linie
+
+
+
+
+-- Exercitiul 12
+
+Definiti un declansator care sa introduca date intr-un  tabel creat 
+dupa ce utilizatorul curent a folosit o comanda LDD
+(declansator sistem - la nivel de schema)
+
+
+
+
+
+
+
+
+
+
+
